@@ -5,7 +5,8 @@
                 <h1>Directives Exercise</h1>
                 <!-- Exercise -->
                 <!-- Build a Custom Directive which works like v-on (Listen for Events) -->
-
+                <button v-customOn:click='clicked'
+                        class='btn btn-primary'>Click Me</button>
             </div>
         </div>
     </div>
@@ -13,7 +14,23 @@
 
 <script>
   export default {
-
+      directives: {
+          customOn: {
+              bind(el, binding) {
+                // el.onclick = function() {
+                //     binding.value();
+                // }
+                const type = binding.arg;
+                const fn = binding.value;
+                el.addEventListener(type, fn);
+              }
+          }
+      },
+      methods: {
+          clicked() {
+              alert('I was clicked!');
+          }
+      }
   }
 </script>
 
