@@ -28,7 +28,7 @@
     export default{
         data() {
             return {
-                question: 'Oops, an error ocurred :/',
+                question: 'Oops, an error occurred',
                 btnData: [
                     {correct: true, answer: 0},
                     {correct: false, answer: 0},
@@ -56,7 +56,7 @@
                         break;
                     default:
                         correctAnswer = 0;
-                        this.question = 'Oops, an Error occurred :/';
+                        this.question = 'Oops, an Error occurred';
                 }
 
                 this.btnData[0].answer = this.generateRandomNumber(correctAnswer - 10, correctAnswer + 10, correctAnswer);
