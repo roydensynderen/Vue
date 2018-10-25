@@ -9,11 +9,11 @@
 </template>
 
 <script>
-export default {
-    methods: {
-        navigateToHome() {
-            this.$router.push('/');
+    export default {
+        methods: {
+            navigateToHome() {
+                this.$router.push({ name: 'home' });
+            }
         }
     }
-}
 </script>
