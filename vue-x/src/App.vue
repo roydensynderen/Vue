@@ -8,6 +8,9 @@
         <hr>
         <app-counter></app-counter>
         <app-second-counter></app-second-counter>
+        <hr>
+        <input type="text" :value='value' @input='updateValue'>
+        <p>{{ value }}</p>
       </div>
     </div>
   </div>
@@ -20,6 +23,21 @@
   import SecondResult from './components/SecondResult.vue'
 
   export default {
+    computed: {
+      value: {
+        get() {
+          return this.$store.getters.value
+        },
+        set(value) {
+          this.$store.dispatch('updateValue', value)
+        }
+      }
+    },
+    methods: {
+      updateValue(event) {
+        this.$store.dispatch('updateValue', event.target.value)
+      }
+    },
     components: {
       appCounter: Counter,
       appSecondCounter: SecondCounter,
