@@ -8,7 +8,9 @@
 <script>
     export default {
         data() {
-            userId: ''
+            return {
+                userId: ''
+            }
         },
         methods: {
             onLoadUser() {
