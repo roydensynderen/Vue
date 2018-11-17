@@ -14,3 +14,9 @@
   padding: 30px;
 }
 </style>
+
+<script>
+export default {
+    
+}
+</script>
