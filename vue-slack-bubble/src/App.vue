@@ -1,6 +1,6 @@
 <template lang="pug">
   .bubble-wrapper
-    .bubble( ref="bubble")
+    .bubble( ref="bubble" )
       img.bubble-image( src="https://s3.ap-southeast-2.amazonaws.com/daily-fire-assets/slack-white.svg" )
     .bubble-pulse( ref="bubblePulse" )
 </template>
