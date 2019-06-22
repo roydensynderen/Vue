@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id='exercise'>
+        <p>VUEJS is pretty cool - {{ name }} ({{ age }})</p>
+        <p>{{ age * 3}}</p>
+        <p>{{ random() }}</p>
+
+        <div>
+            <img v-bind:src='image'>
+        </div>
+
+        <div>
+            <input type='text' v-bind:value='name'>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src='./script.js'></script>
+</body>
+</html>

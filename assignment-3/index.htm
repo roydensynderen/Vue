@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id='exercise'>
+        <div>
+            <p>Current Value: {{ value }}</p>
+            <button @click='value += 5'>Add 5</button>
+            <button @click='value += 1'>Add 1</button>
+            <p>{{ result }}</p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src='./script.js'></script>
+</body>
+</html>

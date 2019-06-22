@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id='exercise'>
+        <div>
+            <button v-on:click='showAlert'>Show Alert</button>
+        </div>
+
+        <div>
+            <input type='text' v-on:keydown='value = $event.target.value'>
+            <p>{{ value }}</p>
+        </div>
+
+        <div>
+            <input type='text' v-on:keydown.enter='value = $event.target.value'>
+            <p>{{ value }}</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src='./script.js'></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id='exercise'>
+        <div>
+            <button @click='show = !show'>Toggle</button>
+            <p v-if='show'>You can see me!</p>
+            <p v-else>... or me!</p>
+        </div>
+
+        <!-- print items in list -->
+        <ul>
+            <li v-for='name in heroNames'>{{ name }}</li>
+        </ul>
+
+        <!-- print key value pairs -->
+        <ul>
+            <li v-for='(key, value) in heroStats'>{{ value }}: {{ key }}</li>
+        </ul>
+
+        <ul>
+            <li v-for='value in testObject'>
+                <template v-if='Array.isArray(value)'>
+                    <div v-for='element in value'>{{ element }}</div>
+                </template>
+
+                <template v-else>
+                    {{ value }}
+                </template>
+            </li>
+        </ul>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src='./script.js'></script>
+</body>
+</html>
